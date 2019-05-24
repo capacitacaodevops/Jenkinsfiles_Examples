@@ -12,16 +12,12 @@ pipeline {
                  }
                  }
                  stage('Branch Atual') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                  steps {
-                       echo "não está na Branch Master"
+                 steps {
+                       echo "está na Branch Master"
                  }
                  }
                  stage('Teste Unitário') {
-                  parallel { 
+                 parallel { 
                             stage('Unit Test') {
                            steps {
                                 echo "Running the unit test..."
@@ -38,8 +34,8 @@ pipeline {
                                 echo "Running the integration test..."
                               }
                            }
-                } 
-               }
-               } 
-          }
+                           }
+                           }
+              }
 }
+
