@@ -15,10 +15,11 @@ pipeline {
                  when {
                        not {
                             branch "master"
+                       echo "não esta na branch master" 
                        }
                  }
                  steps {
-                       echo "não está na Brunch Master"
+                       echo "está na Branch Master"
                  }
                  }
                  stage('Teste Unitário') {
