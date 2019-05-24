@@ -3,7 +3,7 @@ pipeline{
     environment{
 	Toolname="Jenkins"
     }
-    Stages{    
+    stages{    
 	stage("Conditions") {
 		steps{
 			script{
