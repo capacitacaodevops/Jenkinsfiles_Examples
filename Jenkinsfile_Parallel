@@ -20,12 +20,12 @@ pipeline {
                         echo "On Branch master"
                     }
                 }
-                stage('Branch B') {
+                stage('Branch release') {
                     agent {
-                        label "for-branch-b"
+                        label "for-branch-release"
                     }
                     steps {
-                        echo "On Branch B"
+                        echo "On Branch release"
                     }
                 }
                 stage('Branch C') {
