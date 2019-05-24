@@ -11,7 +11,8 @@ pipeline {
                 branch 'release'
             }
             steps {
-                echo 'Deploying'
+                echo 'Lendo'
+                sh 'cat arquivo.txt'
             }
         }
     }
