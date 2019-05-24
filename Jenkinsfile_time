@@ -3,7 +3,7 @@ pipeline {
      stages {
         stage('Example Build') {
            options {
-            timeout(time: 3, unit: 'SECONDS') 
+            timeout(time: 10, unit: 'SECONDS') 
            }     
              agent { docker 'maven:3-alpine' } 
                steps {
@@ -12,6 +12,9 @@ pipeline {
                }
         }
         stage('Example Test') {
+           options {
+            timeout(time: 1, unit: 'SECONDS') 
+           }     
             agent { docker 'openjdk:8-jre' } 
                steps {
                  echo 'Hello, JDK'
