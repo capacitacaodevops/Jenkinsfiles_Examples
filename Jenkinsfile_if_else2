@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    environment{
+	sh 'var=$(cat jenkins.txt ) ; echo $var'
+    }
+    stages{    
+	stage("Conditions") {
+		steps{
+			script{
+        			if (var=="1"){
+					echo "Our CI CD tool"
+				}
+				else { 
+					echo "Not CI CD tool"
+        			}
+    			}
+		}
+	}
+     }
+}
