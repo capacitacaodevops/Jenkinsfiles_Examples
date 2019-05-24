@@ -33,9 +33,6 @@ pipeline {
                               steps {
                                 echo "Running the integration test..."
                               }
-                              steps {
-                                echo "logs do docker..."
-                              }
                            }
                            }
                            }
