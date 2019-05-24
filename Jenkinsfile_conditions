@@ -21,7 +21,7 @@ pipeline {
                  }
                  }
                  stage('Teste Unitário') {
-                 parallel { 
+                  parallel { 
                             stage('Unit Test') {
                            steps {
                                 echo "Running the unit test..."
@@ -37,11 +37,8 @@ pipeline {
                               steps {
                                 echo "Running the integration test..."
                               }
-                              steps {
-                                echo "visualisando os logs do docker..."
-                              }
                            }
-                           }
-                           }
-              }
+                } 
+               }
+               } 
 }
