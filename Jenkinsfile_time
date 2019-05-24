@@ -3,7 +3,7 @@ pipeline {
      stages {
         stage('Example Build') {
            options {
-            timeout(time: 2, unit: 'SECONDS') 
+            timeout(time: 3, unit: 'SECONDS') 
            }     
              agent { docker 'maven:3-alpine' } 
                steps {
