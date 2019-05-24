@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    environment{
+	Toolname="Jenkins"
+    }
+    Stages{    
+	stage("Conditions") {
+		steps{
+			script{
+        			if (Toolname="Jenkins"){
+					echo "Our CI CD tool"
+				}
+				else { 
+					echo "Not CI CD tool"
+
+        			}
+    			}
+		}
+	}
+     }
+}
