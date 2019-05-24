@@ -1,6 +1,7 @@
 pipeline{
     agent any
     environment{
+	sh 'touch arquivo.txt'
 	Toolname="Jenkins"
     }
     stages{    
