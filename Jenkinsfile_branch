@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Example Deploy') {
             when {
-                branch 'release'
+                branch 'master'
             }
             steps {
                 echo 'Lendo'
