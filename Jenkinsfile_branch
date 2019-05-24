@@ -11,7 +11,8 @@ pipeline {
                 branch 'master'
             }
             steps {
-                echo 'Deploying'
+                echo 'Lendo'
+                sh 'cat arquivo.txt'
             }
         }
     }
