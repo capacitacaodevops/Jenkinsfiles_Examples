@@ -1,0 +1,14 @@
+pipeline{
+	agent any
+	stages{
+		stage("shell commands"){
+			steps{
+			 sh"""
+				touch ${JOB_NAME}.${BUILD_NUMBER}.txt
+				ls -lah
+				pwd
+			 """
+			}
+		}
+	}
+}
