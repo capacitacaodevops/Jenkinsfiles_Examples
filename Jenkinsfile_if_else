@@ -11,7 +11,7 @@ pipeline{
 					echo "Our CI CD tool"
                                         sh '''
                                         touch arquivo1.txt
-                                        echo "Not CI CD tool" > arquivo1.txt
+                                        echo "Our CI CD tool" > arquivo1.txt
 					cat arquivo1.txt
 					'''
 				}
