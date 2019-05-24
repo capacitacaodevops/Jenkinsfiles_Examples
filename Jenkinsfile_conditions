@@ -12,14 +12,9 @@ pipeline {
                  }
                  }
                  stage('Branch Atual') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
-                 steps {
-                       echo "não está na Branch Master"
-                 }
+                  steps {
+                       echo "está na Branch release"
+                  }
                  }
                  stage('Teste Unitário') {
                  parallel { 
