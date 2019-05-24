@@ -12,11 +12,6 @@ pipeline {
                  }
                  }
                  stage('Branch Atual') {
-                 /*when {
-                       not {
-                            branch "master"
-                       }
-                 }*/
                  steps {
                        echo "está na Branch Master"
                  }
