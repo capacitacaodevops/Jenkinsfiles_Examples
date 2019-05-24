@@ -12,7 +12,9 @@ pipeline{
 				}
 				else { 
 					echo "Not CI CD tool"
-                                        sh 'touch arquivo.txt'
+                                        sh '''
+                                        touch arquivo.txt
+					'''
         			}
     			}
 		}
