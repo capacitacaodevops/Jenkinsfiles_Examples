@@ -1,7 +1,6 @@
 pipeline{
     agent any
     environment{
-	sh 'touch arquivo.txt'
 	Toolname="Jenkins"
     }
     stages{    
@@ -13,7 +12,7 @@ pipeline{
 				}
 				else { 
 					echo "Not CI CD tool"
-
+                                        sh 'touch arquivo.txt'
         			}
     			}
 		}
