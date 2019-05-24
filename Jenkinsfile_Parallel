@@ -9,6 +9,7 @@ pipeline {
         stage('Parallel Stage') {
             when {
                 branch 'master'
+                echo 'branch master'
             }
             failFast true
             parallel {
