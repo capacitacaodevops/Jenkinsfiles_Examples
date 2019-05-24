@@ -1,17 +1,17 @@
 pipeline {
          agent any
          stages {
-                 stage('One') {
+                 stage('Iniciando o Pipeline') {
                  steps {
                      echo 'Iniciando o Pipeline'
                  }
                  }
-                 stage('Two') {
+                 stage('Confirme se pode continuar') {
                  steps {
                     input('Deseja mesmo continuar?')
                  }
                  }
-                 stage('Three') {
+                 stage('Branch Atual') {
                  when {
                        not {
                             branch "master"
@@ -21,14 +21,14 @@ pipeline {
                        echo "não está na Brunch Master"
                  }
                  }
-                 stage('Four') {
+                 stage('Teste Unitário') {
                  parallel { 
                             stage('Unit Test') {
                            steps {
                                 echo "Running the unit test..."
                            }
                            }
-                            stage('Integration test') {
+                            stage('Teste Integrado') {
                               agent {
                                     docker {
                                             reuseNode true
