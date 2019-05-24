@@ -10,7 +10,6 @@ pipeline{
         			if (Toolname=="jenkins"){
      				    sh '''
                                        var=$(cat jenkins.txt ) ; echo $var
-                                       echo $var
                                        '''
 					echo "Our CI CD tool"
 				}
