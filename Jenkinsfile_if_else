@@ -9,11 +9,16 @@ pipeline{
 			script{
         			if (Toolname=="Jenkins"){
 					echo "Our CI CD tool"
+                                        sh '''
+                                        touch arquivo1.txt
+                                        echo "Not CI CD tool" > arquivo1.txt
+					'''
 				}
 				else { 
 					echo "Not CI CD tool"
                                         sh '''
-                                        touch arquivo.txt
+                                        touch arquivo2.txt
+                                        echo "Not CI CD tool" > arquivo2.txt
 					'''
         			}
     			}
