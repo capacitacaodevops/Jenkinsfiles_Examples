@@ -2,11 +2,15 @@ pipeline{
 	agent any
 	tools{
 		maven 'Tools'
+		ant 'Tools'
 	}
 	stages{
 		stage("tools"){
 			steps{
 				sh 'mvn --version'
+			}
+			steps{
+				sh 'ant -version'
 			}
 		}
 	}
