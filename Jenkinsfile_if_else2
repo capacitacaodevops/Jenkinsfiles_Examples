@@ -8,9 +8,11 @@ pipeline{
 		steps{
 			script{
         			if (var=="jenkins"){
-                                       sh '''var2=$(cat jenkins.txt) 
+                                       sh '''echo "Conteudo" > jenkins.txt
+					     var2=$(cat jenkins.txt) 
                                              echo $var2
                                           '''
+                                       
 
 					echo "Our CI CD tool"
 				}
