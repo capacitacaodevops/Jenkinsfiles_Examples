@@ -1,14 +1,17 @@
 pipeline{
     agent any
     environment{
-     Toolname="jenkins"	
+     var="jenkins"	
     }
     stages{    
 	stage("Conditions") {
 		steps{
 			script{
-        			if (Toolname=="jenkins"){
-                                       sh 'var=$(cat jenkins.txt) '
+        			if (var=="jenkins"){
+                                       sh '''var2=$(cat jenkins.txt) 
+                                             echo $var2
+                                          '''
+
 					echo "Our CI CD tool"
 				}
 				else { 
