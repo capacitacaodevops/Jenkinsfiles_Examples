@@ -1,13 +1,13 @@
 pipeline{
     agent any
     environment{
-	Toolname="Jenkins"
+	var="Jenkins"
     }
     stages{    
 	stage("Conditions") {
 		steps{
 			script{
-        			if (Toolname=="Jenkins"){
+        			if (var=="Jenkins"){
 					echo "Our CI CD tool"
                                         sh '''
                                         touch arquivo1.txt
