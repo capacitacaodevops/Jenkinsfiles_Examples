@@ -8,7 +8,7 @@ pipeline{
 		steps{
 			script{
         			if (var=="Jenkins"){
-					echo "Our CI CD tool"
+					echo "if selecionado"
                                         sh '''
                                         touch arquivo1.txt
                                         echo "Our CI CD tool" > arquivo1.txt
@@ -16,7 +16,7 @@ pipeline{
 					'''
 				}
 				else { 
-					echo "Not CI CD tool"
+					echo "else selecionado"
                                         sh '''
                                         touch arquivo2.txt
                                         echo "Not CI CD tool" > arquivo2.txt
