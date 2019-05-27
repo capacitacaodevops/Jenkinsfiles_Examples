@@ -4,7 +4,7 @@ pipeline{
 		stage("Condition"){
 			steps{
 				script{
-					for(int i=0;i<5;i++){
+					for(int i=0;i<10;i++){
 					println(i)
 					}
 				}
@@ -13,7 +13,16 @@ pipeline{
 		stage("Condition2"){
 			steps{
 				script{
-					for(int i=100;i<1000;i++){
+					for(int i=0;i<100;i++){
+					println(i)
+					}
+				}
+			}
+		}
+		stage("Condition3"){
+			steps{
+				script{
+					for(int i=0;i<1000;i++){
 					println(i)
 					}
 				}
