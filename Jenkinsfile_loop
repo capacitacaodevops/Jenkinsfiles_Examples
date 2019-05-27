@@ -12,7 +12,6 @@ pipeline{
 				if(Buildnum%2==0)
 					echo "even"
 					echo $Buildnum
-					echo $BUILD_NUMBER
 				else
 					echo "odd"	
 				}
