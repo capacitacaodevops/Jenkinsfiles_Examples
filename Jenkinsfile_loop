@@ -10,5 +10,14 @@ pipeline{
 				}
 			}
 		}
+		stage("Condition2"){
+			steps{
+				script{
+					for(int i=100;i<1000;i++){
+					println(i)
+					}
+				}
+			}
+		}
 	}
 }
