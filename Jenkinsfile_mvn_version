@@ -9,6 +9,8 @@ pipeline{
 			steps{
 				sh 'mvn --version'
 			}
+                }
+		stage("tools2"){
 			steps{
 				sh 'ant -version'
 			}
