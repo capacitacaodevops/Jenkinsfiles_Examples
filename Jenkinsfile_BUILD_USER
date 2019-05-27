@@ -2,7 +2,7 @@
 pipeline{
 	agent any
 	stages {
-		stages('User'){
+		stage('User'){
 			steps{
 				wrap([$class: 'Builduser']){
 					script{
