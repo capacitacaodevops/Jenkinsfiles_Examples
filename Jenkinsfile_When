@@ -6,7 +6,7 @@ pipeline{
 	stages{
 		stage("equals"){
 			when{
-				equals excpected:"Docker", actual: "$var"
+				equals expected:"Docker", actual: "$var"
 			}
 		
 			steps{
