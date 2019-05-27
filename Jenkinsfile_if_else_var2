@@ -4,9 +4,11 @@ pipeline{
 	stage("Conditions") {
 		steps{
 			script{
-        		        var="jenkins"
-				if (var=="jenkins"){
-                                       sh '''echo "Conteudo" > jenkins.txt
+        		        sh 'echo "jenkins" > jenkins.txt'
+				var=$(cat jenkins.txt) 
+				var2="jenkins"
+				if (var2=="jenkins"){
+                                       sh '''echo "Conteudo" > jenkins3.txt
 					     var2=$(cat jenkins.txt) 
                                              echo $var2
                                           '''
