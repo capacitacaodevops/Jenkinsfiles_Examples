@@ -1,9 +1,9 @@
 pipeline{
 	agent any
 	stages{
-		stage("perlfile"){
+		stage("finding_sintax"){
 				when{
-					expression {return readFile ('arquivo.txt').contains('dielly')}	
+					expression {return readFile ('arquivo.txt').contains('branch')}	
 				}
 		
 				steps{
