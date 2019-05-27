@@ -1,0 +1,27 @@
+pipeline{
+	agent any
+	environment{
+		var="Jenkins"
+	}
+	stages{
+		stage("equals"){
+			when{
+				equals excpected:"Docker", actual: "$var"
+			}
+		
+			steps{
+				echo "will execute"
+			}
+		}
+		stage("not"){
+			when{
+				not{
+					environment name:'var', value:'Jenkins'
+				}
+			}
+			steps{
+				echo "Not execute
+			}
+		}
+	}
+}	
