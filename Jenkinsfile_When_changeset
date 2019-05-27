@@ -25,6 +25,7 @@ pipeline{
 				}
 		
 				steps{
+                                sh 'touch teste.txt'
 				echo "Yes, Commit files contain Txt files"
 				}
 		}
