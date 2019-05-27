@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("perlfile"){
 				when{
-					expression {return readFile ('arquivo.txt').contains('branch')}	
+					expression {return readFile ('arquivo.txt').contains('dielly')}	
 				}
 		
 				steps{
