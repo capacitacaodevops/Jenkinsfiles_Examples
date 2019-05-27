@@ -1,0 +1,32 @@
+pipeline{
+	agent any
+	stages{
+		stage("perlfile"){
+				when{
+					changeset '*.pl'
+				}
+		
+				steps{
+				echo "Yes, Commit files contain perls files"
+				}
+		}
+		stage("Java"){
+				when{
+					changeset '*.war'	
+				}
+		
+				steps{
+				echo "Yes, Commit files contain Java files"
+				}
+		}
+		stage("Txt"){
+				when{
+					changeset '*.txt'	
+				}
+		
+				steps{
+				echo "Yes, Commit files contain Txt files"
+				}
+		}
+	}
+}	
