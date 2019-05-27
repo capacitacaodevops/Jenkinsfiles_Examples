@@ -7,7 +7,7 @@ pipeline{
 	stage("Conditions") {
 		steps{
 			script{
-        			if (var=="Jenkins"){
+        			if (var=="Jenkin"){
 					echo "if selecionado"
                                         sh '''
                                         touch arquivo1.txt
