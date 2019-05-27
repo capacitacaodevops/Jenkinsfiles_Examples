@@ -1,0 +1,15 @@
+//user build var plugin
+pipeline{
+	agent any
+	stages {
+		stages('User'){
+			steps{
+				wrap([$class: 'Builduser']){
+					script{
+						echo "${BUILD_USER}"
+					}
+				}
+			}
+		}
+	}
+}
