@@ -1,0 +1,20 @@
+pipeline{
+	agent any
+	stages{
+		stage("Condition"){
+			steps{
+				script{
+					for(int=0;i<5;i++){
+					println(i)
+					}
+				
+				int Buildnum="$BUILD_NUMBER"
+				if(Buildnum%2==0)
+					echo "even"
+				else
+					echo "odd"	
+				}
+			}
+		}
+	}
+}
