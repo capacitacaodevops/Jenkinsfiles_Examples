@@ -14,10 +14,10 @@ pipeline{
                                           '''
                                        
 
-					echo "Our CI CD tool"
+					echo "if selecionado"
 				}
 				else { 
-					echo "Not CI CD tool"
+					echo "else selecionado"
         			}
     			}
 		}
