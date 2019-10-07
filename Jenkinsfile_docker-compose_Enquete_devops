@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh '''
                     cd Enquete/compose
-                     nohup docker-compose up &
+                     sudo nohup docker-compose up &
                    '''
             }
         }
