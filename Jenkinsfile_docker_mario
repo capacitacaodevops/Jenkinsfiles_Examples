@@ -13,7 +13,10 @@ pipeline {
         
         stage('Testar Aplicação') {
             steps {
-                echo 'teste....'
+                sh '''
+                   docker stop jenkins
+                   docker rm jenkins
+                   '''
             }
         }
     }
