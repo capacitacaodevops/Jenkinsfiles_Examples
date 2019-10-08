@@ -6,7 +6,7 @@ pipeline {
         stage('Iniciar Aplicação') {
             steps {
                 sh '''
-                  docker run -i pengbai/docker-supermario
+                  nohup docker run -i pengbai/docker-supermario &
                    '''
             }
         }
