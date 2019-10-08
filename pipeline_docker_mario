@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    
+    stages {
+               
+        stage('Iniciar Aplicação') {
+            steps {
+                sh '''
+                    cd Enquete/compose
+                      nohup docker-compose up &
+                   '''
+            }
+        }
+        
+        stage('Testar Aplicação') {
+            steps {
+                echo 'teste....'
+            }
+        }
+    }
+}
