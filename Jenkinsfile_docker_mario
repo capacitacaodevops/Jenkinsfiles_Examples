@@ -14,7 +14,7 @@ pipeline {
         stage('espaço em disco') {
             steps {
                 sh '''
-                   sudo df -h
+                   df -h
                    '''
             }
         }
