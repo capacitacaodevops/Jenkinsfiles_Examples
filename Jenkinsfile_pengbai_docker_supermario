@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+               
+        stage('Iniciar Container mario') {
+            steps {
+                sh '''
+                  nohup docker run -i -p 8081:8080 pengbai/docker-supermario &
+                   '''
+            }
+        }
+        
+        stage('Baixar container jenkins') {
+            steps {
+                sh '''
+                   docker stop jenkins
+                   docker rm jenkins
+                   '''
+            }
+        }
+    }
+}
