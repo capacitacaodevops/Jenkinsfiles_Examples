@@ -11,10 +11,10 @@ pipeline {
             }
         }
         
-        stage('Baixar container jenkins') {
+        stage('espaço em disco') {
             steps {
                 sh '''
-                   docker ps
+                   sudo df -h
                    '''
             }
         }
