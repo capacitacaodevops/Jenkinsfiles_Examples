@@ -10,6 +10,15 @@ pipeline {
                    '''
             }
          }
+         
+         stage('LS') {
+            steps {
+                sh '''
+                   pwd
+                   ls
+                   '''
+            }
+         }
         
         
     }
