@@ -14,7 +14,7 @@ pipeline {
         stage('Baixar container jenkins') {
             steps {
                 sh '''
-                   sudo docker ps
+                   docker ps
                    '''
             }
         }
