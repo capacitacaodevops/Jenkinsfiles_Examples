@@ -5,4 +5,4 @@ services:
     hostname: marioH
     container_name: marioC
     ports: 
-      - 8081:8080
+      - 8082:8080
