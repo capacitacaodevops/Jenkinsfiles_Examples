@@ -4,7 +4,7 @@ pipeline {
     
     stages {
                
-        stage('Baixar Container mario') {
+        stage('Download Container mario') {
             steps {
                 sh '''
                    docker pull pengbai/docker-supermario:latest
