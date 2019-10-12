@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh '''
                    ./up_mario.sh
+                   tail -f nohup.out
                    '''
             }
          }
