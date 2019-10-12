@@ -11,15 +11,7 @@ pipeline {
             }
          }
          
-         stage('Build') {
-            steps {
-                sh '''
-                   cd spring-petclinic
-                   ./mvnw package
-                   '''
-            }
-         }
-         
+                  
          stage('Build') {
             steps {
                 sh '''
