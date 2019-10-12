@@ -16,7 +16,7 @@ pipeline {
          stage('Iniciar Container Mario') {
             steps {
                 sh '''
-                 sudo ./up_mario.sh
+                 ./up_mario.sh
                    '''
             }
          }
