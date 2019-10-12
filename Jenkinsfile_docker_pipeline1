@@ -6,7 +6,6 @@ pipeline {
         stage('Download Container mario') {
             steps {
                 sh '''
-                   rm -Rvf *
                    id
                    pwd
                    docker pull pengbai/docker-supermario:latest
