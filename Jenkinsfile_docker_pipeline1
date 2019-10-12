@@ -16,7 +16,7 @@ pipeline {
          stage('Iniciar Container Mario') {
             steps {
                 sh '''
-                 docker-compose up
+                   ./up_mario.sh
                    '''
             }
          }
