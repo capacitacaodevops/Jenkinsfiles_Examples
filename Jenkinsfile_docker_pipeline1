@@ -1,21 +1,42 @@
-
 pipeline {
-    agent none
-     
+    agent any
+    
     stages {
-        stage('Example Build') {
-            agent { docker 'maven:3-alpine' } 
+               
+        stage('Download Repositório') {
             steps {
-                echo 'Hello, Maven'
-                sh 'mvn --version'
+                sh '''
+                  git clone https://github.com/capacitacaodevops/spring-petclinic                   
+                  '''
             }
-        }
-        stage('Example Test') {
-            agent { docker 'openjdk:8-jre' } 
+         }
+         
+         stage('Build') {
             steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
+                sh '''
+                   cd spring-petclinic
+                   ./mvnw package
+                   '''
             }
-        }
+         }
+         
+         stage('Build') {
+            steps {
+                sh '''
+                   cd spring-petclinic
+                   ./mvnw package
+                   '''
+            }
+         }
+         
+         stage('Start Aplicação') {
+            steps {
+                sh '''
+                  java -jar target/*.jar
+                   '''
+            }
+         }
+        
+        
     }
 }
