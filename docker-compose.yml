@@ -3,6 +3,6 @@ services:
   marioS: 
     image: pengbai/docker-supermario
     hostname: marioH
-    container_name: marioH
+    container_name: marioC
     ports: 
       - 8081:8080
