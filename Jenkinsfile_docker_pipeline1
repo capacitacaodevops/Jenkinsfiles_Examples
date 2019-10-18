@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''
                    ./up_mario.sh
-                   docker-compose -f docker-compose.yml up
+                   
                    '''
             }
          }
