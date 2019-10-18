@@ -8,7 +8,7 @@ pipeline {
                 sh '''
                    id
                    pwd
-                   docker pull pengbai/docker-supermario:latest
+                   docker-compose pull
                    '''
             }
          }
