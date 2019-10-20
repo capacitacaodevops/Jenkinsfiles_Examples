@@ -8,7 +8,7 @@ pipeline {
                 sh '''
                    id
                    pwd
-                   docker pull pengbai/docker-supermario:latest
+                   docker-compose -f docker-compose.yml pull
                    '''
             }
          }
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''
                    ./up_mario.sh
-                   docker-compose up
+                   docker-compose -f docker-compose.yml up
                    '''
             }
          }
