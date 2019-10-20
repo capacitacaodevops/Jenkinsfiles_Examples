@@ -19,7 +19,7 @@ pipeline {
         stage('up Container Mario') {
             steps {
                 sh '''
-                   docker-compose -f docker-compose-mario.yml up
+                   docker-compose -f docker-compose-mario.yml up -d
                    '''
             }
          }
