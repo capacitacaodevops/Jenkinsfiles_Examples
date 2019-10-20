@@ -3,27 +3,7 @@ pipeline {
     
     stages {
     
-                   
-        stage('Pull Container Mario') {
-            steps {
-                sh '''
-                   id
-                   pwd
-                   docker-compose -f docker-compose-mario.yml pull
-                   '''
-            }
-         }
-         
-         stage('Iniciar Container Mario') {
-            steps {
-                sh '''
-                   ./up_mario.sh
-                   docker-compose -f docker-compose-mario.yml up
-                    '''
-            }
-         }
-         
-         stage('Download Aplicação Enquete Devops') {
+     stage('Download Aplicação Enquete Devops') {
            steps {     
         git url: 'https://github.com/capacitacaodevops/Enquete_Devops.git'
             }
@@ -44,6 +24,28 @@ pipeline {
             }
          }
          
+    
+                   
+        stage('Pull Container Mario') {
+            steps {
+                sh '''
+                   id
+                   pwd
+                   docker-compose -f docker-compose-mario.yml pull
+                   '''
+            }
+         }
+         
+         stage('Iniciar Container Mario') {
+            steps {
+                sh '''
+                   ./up_mario.sh
+                   docker-compose -f docker-compose-mario.yml up
+                    '''
+            }
+         }
+         
+        
         
         
     }
