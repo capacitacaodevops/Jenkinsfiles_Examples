@@ -2,26 +2,28 @@ pipeline {
     agent any
     
     stages {
-               
-        stage('Download Container mario') {
+    
+                        
+                     
+        stage('Pull Container Mario') {
             steps {
                 sh '''
                    id
                    pwd
-                   docker-compose -f docker-compose.yml pull
+                   docker-compose -f docker-compose-mario.yml pull
                    '''
             }
          }
-         
-         stage('Iniciar Container Mario') {
+                      
+        stage('up Container Mario') {
             steps {
                 sh '''
-                   ./up_mario.sh
-                   docker-compose -f docker-compose.yml up
+                   docker-compose -f docker-compose-mario.yml up -d
                    '''
             }
          }
          
+             
         
         
     }
