@@ -3,45 +3,22 @@ pipeline {
     
     stages {
     
-     stage('Download Aplicação Enquete Devops') {
-           steps {     
-        git url: 'https://github.com/capacitacaodevops/Enquete_Devops.git'
-            }
-        }
-         
-         
-         
-         stage('Descompactar Aplicação Enquete') {
-            steps {
-                sh 'tar -xvzf Enquete.tar.gz'
-            }
-        }
-        
-        
-         
-          stage('Pull and Up Containers Enquete') {
-            steps {
-                sh '''
-                    id
-                    pwd
-                    cd Enquete/compose
-                    pwd
-                    docker-compose -f docker-compose.yml pull
-                    docker-compose -f docker-compose.yml up
-                    '''
-            }
-         }
-         
+          
                  
-    
-                   
-        stage('Pull and up Container Mario') {
+                     
+        stage('Pull Container Mario') {
             steps {
                 sh '''
                    id
                    pwd
                    docker-compose -f docker-compose-mario.yml pull
-                   ./up_mario.sh
+                   '''
+            }
+         }
+                      
+        stage('up Container Mario') {
+            steps {
+                sh '''
                    docker-compose -f docker-compose-mario.yml up
                    '''
             }
