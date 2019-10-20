@@ -9,43 +9,45 @@ pipeline {
             }
         }
          
+         
+         
          stage('Descompactar Aplicação Enquete') {
             steps {
                 sh 'tar -xvzf Enquete.tar.gz'
             }
         }
+        
+        
          
-          stage('Iniciar Aplicação Enquete') {
+          stage('Pull and Up Containers Enquete') {
             steps {
                 sh '''
+                    id
+                    pwd
                     cd Enquete/compose
-                    sudo nohup docker-compose up &
-                   '''
+                    pwd
+                    docker-compose -f docker-compose.yml pull
+                    docker-compose -f docker-compose.yml up
+                    '''
             }
          }
          
+                 
     
                    
-        stage('Pull Container Mario') {
+        stage('Pull and up Container Mario') {
             steps {
                 sh '''
                    id
                    pwd
                    docker-compose -f docker-compose-mario.yml pull
+                   ./up_mario.sh
+                   docker-compose -f docker-compose-mario.yml up
                    '''
             }
          }
          
-         stage('Iniciar Container Mario') {
-            steps {
-                sh '''
-                   ./up_mario.sh
-                   docker-compose -f docker-compose-mario.yml up
-                    '''
-            }
-         }
-         
-        
+             
         
         
     }
